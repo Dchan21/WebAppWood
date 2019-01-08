@@ -1,0 +1,67 @@
+﻿@model WebAppWood.Models.ModelBuy
+
+@{
+    ViewBag.Title = "Detalle de Compra";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Detalle de Compra</h2>
+
+<div>
+    <h4>Compras</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Vendedor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Vendedor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TallaPMT)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TallaPMT)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Cantidad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cantidad)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MontoTalla)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MontoTalla)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Categorias)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Categorias)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaCreacion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaCreacion)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "EditBuy", new { id = Model.id },null) |
+    @Html.ActionLink("Regresar", "BuyList")
+</p>

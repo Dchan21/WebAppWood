@@ -1,0 +1,36 @@
+﻿@model WebAppWood.Models.ModelPersona
+
+@{
+    ViewBag.Title = "DetalleVendedor";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Detalle Vendedor</h2>
+<div class="row">
+    <div class="col-sm-6">
+        <div class="card card-header bg-primary text-white">
+            <h4 class="card-title">@Model.Nombre @Model.Apellido1 @Model.Apellido2</h4>                    
+        </div>
+        <div class="card-block">
+            <p class="card-text">Cedula: @Model.Cedula</p>
+            <p class="card-text">Correo: @Model.Correo</p>
+            <p class="card-text">Telefono: @Model.Telefono</p>
+            <p class="card-text">Celular: @Model.Celular</p>
+            <p class="card-text">Codigo: @Model.Codigo</p>
+            <p class="card-text">Consecutivo: @Model.Consecutivo</p>
+            <p class="card-text">Pais: @Model.Pais</p>
+            <p class="card-text">
+                @if (@Model.Status == 1)
+                {
+                    <text> Estatus: Activo</text>
+                }
+                else
+                {
+                    <text> Estatus: Inactivo</text>
+                }
+            </p>
+            <a href="javascript:;" class="btn btn-primary">Go somewhere</a>
+        </div>
+
+    </div>
+</div>

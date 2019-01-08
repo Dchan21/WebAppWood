@@ -1,0 +1,64 @@
+﻿@model IEnumerable<WebAppWood.Models.ModelBuy>
+
+@{
+    ViewBag.Title = "BuyList";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Lista de Compras</h2>
+
+<p>
+    @Html.ActionLink("Insertar Compra", "Createbuy")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Vendedor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TallaPMT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Cantidad)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MontoTalla)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Categorias)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FechaCreacion)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Vendedor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TallaPMT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cantidad)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MontoTalla)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Categorias)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FechaCreacion)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "EditBuy", new { id=item.id },null) |
+            @Html.ActionLink("Detalle", "BuyDetails", new { id=item.id },null) |
+            @Html.ActionLink("Delete", "DeleteBuy", new { id=item.id },null)
+        </td>
+    </tr>
+}
+
+</table>

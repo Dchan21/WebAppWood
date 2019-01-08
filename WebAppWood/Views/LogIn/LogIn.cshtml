@@ -1,0 +1,64 @@
+﻿
+@{
+    ViewBag.Title = "SignUp";
+    Layout = "~/Views/Shared/_LayoutLogIn.cshtml";
+}
+
+<div class="app signin usersession">
+    <div class="session-wrapper">
+        <div class="page-height-o row-equal align-middle">
+            <div class="column">
+                <div class="card bg-white no-border">
+                    <div class="card-block">
+                        <form role="form" class="form-layout" action="/LogIn/LogIn" method="post">
+                            <div class="text-center m-b">
+                                <h4 class="text-uppercase">Bienvenido</h4>
+                                <p>Por favor Escriba su Usuario para Ingresar</p>
+                            </div>
+                            <div class="form-inputs">
+                                <label class="text-uppercase">Cuenta de Usuario</label>
+                                <input type="text" class="form-control input-lg" placeholder="Usuario" name="Username" required>
+                                <label class="text-uppercase">Clave</label>
+                                <input type="password" class="form-control input-lg" placeholder="Clave" name="Password" required>
+                            </div>
+                            <button class="btn btn-primary btn-block btn-lg m-b" type="submit">Ingresar</button>
+                        </form>
+                    </div>
+                    <a ui-sref="user.forgot" class="bottom-link">Forgotten password?</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- bottom footer -->
+    <footer class="session-footer">
+        <nav class="footer-right">
+            <ul class="nav">
+                <li>
+                    <a href="javascript:;">Feedback</a>
+                </li>
+                <li>
+                    <a href="javascript:;" class="scroll-up">
+                        <i class="fa fa-angle-up"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <nav class="footer-left hidden-xs">
+            <ul class="nav">
+                <li>
+                    <a href="javascript:;"><span>About</span> Reactor</a>
+                </li>
+                <li>
+                    <a href="javascript:;">Privacy</a>
+                </li>
+                <li>
+                    <a href="javascript:;">Terms</a>
+                </li>
+                <li>
+                    <a href="javascript:;">Help</a>
+                </li>
+            </ul>
+        </nav>
+    </footer>
+    <!-- /bottom footer -->
+</div>

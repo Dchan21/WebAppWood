@@ -1,0 +1,40 @@
+﻿@model IEnumerable<WebAppWood.Models.ModelPersona>
+    @{ ViewBag.Title = "Tipo de Madera";
+        Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+    }
+
+    <h2>Seleccione el Tipo de Madera</h2>
+
+    <div class="">
+        <div class="container">
+            <div class="row justify-content-md-center">
+                <div class="col col-md-5">
+                    <form class="contact-form" action="/Wood/InsertTroza" method="post">
+                        <div class="form-group">
+                            <label for="select-beast">Selecione el tipo de madera</label>
+                            <select id="select-beast" class="demo-default" placeholder="Seleccione.." name="Tipo">
+                                <option value="">Seleccione..</option>
+                                <option value="1">Cipres</option>
+                                <option value="4">Teca</option>
+                                <option value="2">G-Melina</option>
+                                <option value="3">Pino</option>
+                            </select>
+                            <div class="m-b">
+                                <label>Ingrese el Nombre o Cedula del Vendedor</label>
+                                <select class="select2" style="width: 100%;" name="Vendedor">
+                                    <option value="">Busque el vendedor</option>
+                                    @foreach (var item in Model)
+                                    {
+                                        <option value="@item.id">@item.Nombre @item.Apellido1 @item.Apellido2 | @item.Cedula</option>
+                                    }
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-xl btn-block btn-primary">Send</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>

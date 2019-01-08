@@ -1,0 +1,51 @@
+﻿@{
+    ViewBag.Title = "CreateVendedor";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Ingrese un Vendedor</h2>
+<div>
+    <form class="contact-form" action="/Persona/CreateVendedor" method="post">
+        <div class="form-group">
+            <div class="divInput col-sm-8">
+                <div class="col-sm-12">
+                    <label class="col-sm-3 control-label">Vendedor</label>
+                    <input class="col-sm-4" type="text"  name="Nombre" >
+                </div>
+                <div class="col-sm-12">
+                    <label class="col-sm-3 control-label">Primero Apellido</label>
+                    <input class="col-sm-4" type="text"  name="Apellido1" >
+                </div>
+                <div class="col-sm-12">
+                    <label class="col-sm-3 control-label">Segundo Apellido</label>
+                    <input class="col-sm-4" type="text"  name="Apellido2" >
+                </div>
+                <div class="col-sm-12">
+                    <label class="col-sm-3 control-label">Correo</label>
+                    <input class="col-sm-4" type="text"  name="Correo">
+                </div>
+                <div class="col-sm-12">
+                    <label class="col-sm-3 control-label">Cedula</label>
+                    <input class="col-sm-4" type="text"  name="Cedula">
+                </div>
+                <div class="col-sm-12">
+                    <label class="col-sm-3 control-label">Telefono</label>
+                    <input class="col-sm-4" type="text"  name="Telefono" />
+                </div>
+                <div class="col-sm-12">
+                    <label class="col-sm-3 control-label">Celular</label>
+                    <input class="col-sm-4" type="text"  name="Celular">
+                </div>
+                <div class="col-sm-12">
+                    <label class="col-sm-3 control-label">Pais</label>
+                    <input class="col-sm-4" type="text"  name="Pais">
+                </div>
+                <div class="form-group col-sm-6" style="margin:3px; padding-right:15px;padding-top:15px;">
+                    <button type="submit" class="btn btn-xl btn-block btn-primary" style="border-radius:5px; margin:1px">Send</button>
+                </div>
+            </div>
+           
+        </div>
+    </form>
+</div>
+

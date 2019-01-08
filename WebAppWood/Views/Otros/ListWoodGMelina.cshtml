@@ -1,0 +1,77 @@
+﻿@model IEnumerable<WebAppWood.Models.ModelOtherWood>
+
+@{
+    ViewBag.Title = "ListWoodGMelina";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Lista de Trozas GMelina</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Codigo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Consecutivo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Tipo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FechaIngreso)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Talla)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Codigo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Consecutivo)
+            </td>
+            <td>
+                G-Melina
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FechaIngreso)
+            </td>
+            @if (item.Talla.Equals("Amarillo") == true)
+            {
+                <td style="background-color:#f1f10c;color:black;font-size:16px;text-align:center;border:1px solid #000;">
+                    @Html.DisplayFor(modelItem => item.Talla)
+                </td>
+            }
+            else if (item.Talla.Equals("Verde") == true)
+            {
+                <td style="background-color:#35a442;color:White;font-size:16px;text-align:center;border:1px solid #000;">
+                    @Html.DisplayFor(modelItem => item.Talla)
+                </td>
+            }
+            else if (item.Talla.Equals("Azul") == true)
+            {
+                <td style="background-color:#2325ac; color:white;font-size:16px;text-align:center;border:1px solid #000;">
+                    @Html.DisplayFor(modelItem => item.Talla)
+                </td>
+            }
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.id }) |
+                @Html.ActionLink("Details", "Details", new { id = item.id }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.id })
+            </td>
+        </tr>
+    }
+
+</table>

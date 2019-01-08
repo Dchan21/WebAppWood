@@ -1,0 +1,356 @@
+﻿@model WebAppWood.Models.ModelCipres
+
+@{
+    ViewBag.Title = "InsertarCipres";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+<div class="form-horizontal">
+    <h2>Troza de Cipres</h2>
+    <div>
+        <form class="contact-form" action="/Cipres/InsertCipres" method="post">
+            <div class="form-group">
+                <input class="form-control" type="hidden" readonly name="id" value="@Model.Vendedor">
+                <div style="border: 1px solid #2c77ba; border-radius: 5px; margin: 1% 5%;padding:15px; overflow:auto">
+                    <div class="col-sm-6">
+                        <label class="col-sm-3 control-label">Vendedor</label>
+                        <input class="col-sm-4" type="text" readonly name="Nombre" value="@Model.Nombre">
+                    </div>
+                    <div class="col-sm-6">
+                        <label class="col-sm-3 control-label">Cedula</label>
+                        <input class="col-sm-4" type="text" readonly name="Cedula" value="@Model.Cedula">
+                    </div>
+                    <div class="col-sm-6">
+                        <label class="col-sm-3 control-label">Codigo</label>
+                        <input class="col-sm-4" type="text" readonly name="Codigo" value="@Model.Codigo">
+                    </div>
+                    <div class="col-sm-6">
+                        <label class="col-sm-3 control-label">Inicio Consecutivo</label>
+                        <input class="col-sm-4" type="text" readonly name="Consecutivo" value="@Model.Consecutivo">
+                    </div>
+                    <div class="col-lg-6 input-prepend input-group">
+                        <label class="col-sm-3 control-label">Fecha</label>
+                        <input type="text" class="col-sm-4" data-provide="datepicker" placeholder="Datepicker" name="Fecha" value="@Model.FechaIngreso.ToShortDateString()">
+                    </div>
+
+                </div>
+                <div class="col-sm-5" style="border: 1px solid #2c77ba; border-radius: 5px; margin: 1% 5%;padding:15px;">
+                    <div class="col-sm-12">
+                        <label class="col-sm-4 control-label">Largo Pulgadas</label>
+                        <input type="number" step="0.001" class="col-sm-4" name="LargoPulgadas1">
+                    </div>
+                    <div class="col-sm-12">
+                        <label class="col-sm-4 control-label">Largo Pulgadas 2</label>
+                        <input type="number" step="0.001" class="col-sm-4" name="LargoPulgadas2">
+                    </div>
+                    <div class="col-sm-12">
+                        <label class="col-sm-4 control-label">Largo Pulgadas 3</label>
+                        <input type="number" step="0.001" class="col-sm-4" name="LargoPulgadas3">
+                    </div>
+                    <div class="col-sm-12">
+                        <label class="col-sm-4 control-label">Largo Metros Bruto</label>
+                        <input type="number" step="0.001" class="col-sm-4" name="LargoMetrosBruto1">
+                    </div>
+                    <div class="col-sm-12">
+                        <label class="col-sm-4 control-label">Largo Metros Bruto 2</label>
+                        <input type="number" step="0.001" class="col-sm-4" name="LargoMetrosBruto2">
+                    </div>
+                    <div class="col-sm-12">
+                        <label class="col-sm-4 control-label">Largo Metros Bruto 3</label>
+                        <input type="number" step="0.001" class="col-sm-4" name="LargoMetrosBruto3">
+                    </div>
+                </div>
+                <div class="col-sm-5" style="border: 1px solid #2c77ba; border-radius: 5px; margin:1%; padding:15px; overflow:auto;">
+                    <div class="col-sm-12">
+                        <label class="col-sm-4 control-label">Medidas en Cruz</label>
+                        <input type="number" step="0.001" class="col-sm-4" name="Cruz1">
+                        <input type="number" step="0.001" class="col-sm-4" name="Cruz2">
+                    </div>
+
+                    <div class="col-sm-12">
+                        <label class="col-sm-4 control-label">Diametros Centimetros</label>
+                        <input type="number" step="0.001" class="col-sm-4" name="D1">
+                    </div>
+
+                    <div class="col-sm-12">
+                        <label class="col-sm-4 control-label">Diametros Centimetros 2</label>
+                        <input type="number" step="0.001" class="col-sm-4" name="D2">
+                    </div>
+
+                    <div class="col-sm-12">
+                        <label class="col-sm-4 control-label">Diametros Centimetros 3</label>
+                        <input type="number" step="0.001" class="col-sm-4" name="D3">
+                    </div>
+                </div>
+                <div class="form-group col-sm-5" style="margin:3px; padding-right:15px;">
+                    <button type="submit" class="btn btn-xl btn-block btn-primary" style="border-radius:5px; margin:1px">Send</button>
+                </div>
+            </div>
+        </form>
+        <table class="table">
+            <tr>
+                <th>
+                    Consecutivo
+                </th>
+                <th>
+                    Codigo
+                </th>
+                <th>
+                    Tipo
+                </th>
+                <th>
+                    Largo Pulgadas
+                </th>
+                <th>
+                    Talla
+                </th>
+                <th>
+                    Largo Pulgadas
+                </th>
+                <th>
+                    Talla
+                </th>
+                <th>
+                    Largo Pulgadas
+                </th>
+                <th>
+                    Talla
+                </th>
+                <th>
+                    Cruz
+                </th>
+                <th>
+                    D1
+                </th>
+                <th>
+                    Talla
+                </th>
+                <th>
+                    D2
+                </th>
+                <th>
+                    Talla
+                </th>
+                <th>
+                    D3
+                </th>
+                <th>
+                    Talla
+                </th>
+
+                <th>
+                    Largos Brutos
+                </th>
+                <th>
+                    Largos Brutos
+                </th>
+                <th>
+                    Largos Brutos
+                </th>
+                <th>
+                    Fecha Ingreso
+                </th>
+
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model.ListaCipres)
+            {
+                <tr>
+                    <td>
+                        @item.id
+                    </td>
+                    <td>
+                        @item.Codigo@item.Consecutivo
+                    </td>
+                    <td>
+                        Cipres
+                    </td>
+                    <td>
+                        @item.LargoPulgadas1
+                    </td>
+                    @if (item.Talla1.Equals("Amarillo") == true)
+                    {
+                        <td style="background-color:#f1f10c;color:black;font-size:16px;text-align:center;border:1px solid #000;">
+                            @item.Talla1
+                        </td>
+                    }
+                    else if (item.Talla1.Equals("Naranja") == true)
+                    {
+                        <td style="background-color:#ff5e00;color:black;font-size:16px;text-align:center;border:1px solid #000;">
+                            @item.Talla1
+                        </td>
+                    }
+                    else if (item.Talla1.Equals("Verde") == true)
+                    {
+                        <td style="background-color:#35a442;color:White;font-size:16px;text-align:center;border:1px solid #000;">
+                            @item.Talla1
+                        </td>
+                    }
+                    else if (item.Talla1.Equals("Azul") == true)
+                    {
+                        <td style="background-color:#2325ac; color:white;font-size:16px;text-align:center;border:1px solid #000;">
+                            @item.Talla1
+                        </td>
+                    }
+                    else if (item.Talla1.Equals("-") == true)
+                    {
+                        <td style="background-color:#565554;color:white;font-size:16px;text-align:center;border:1px solid #000;">
+                            @item.Talla1
+                        </td>
+                    }
+                    <td>
+                        @item.LargoPulgadas2
+                    </td>
+                    @if (item.Talla2.Equals("Amarillo") == true)
+                    {
+                        <td style="background-color:#f1f10c;color:black;font-size:16px;text-align:center;border:1px solid #000;">
+                            @item.Talla2
+                        </td>
+                    }
+                    else if (item.Talla2.Equals("Naranja") == true)
+                    {
+                        <td style="background-color:#ff5e00;color:black;font-size:16px;text-align:center;border:1px solid #000;">
+                            @item.Talla2
+                        </td>
+                    }
+                    else if (item.Talla2.Equals("Verde") == true)
+                    {
+                        <td style="background-color:#35a442;color:White;font-size:16px;text-align:center;border:1px solid #000;">
+                            @item.Talla2
+                        </td>
+                    }
+                    else if (item.Talla2.Equals("Azul") == true)
+                    {
+                        <td style="background-color:#2325ac; color:white;font-size:16px;text-align:center;border:1px solid #000;">
+                            @item.Talla2
+                        </td>
+                    }
+                    <td>
+                        @item.LargoPulgadas3
+                    </td>
+                    @if (item.Talla3.Equals("Amarillo") == true)
+                    {
+                        <td style="background-color:#f1f10c;color:black;font-size:16px;text-align:center;border:1px solid #000;">
+                            @item.Talla3
+                        </td>
+                    }
+                    else if (item.Talla3.Equals("Naranja") == true)
+                    {
+                        <td style="background-color:#ff5e00;color:black;font-size:16px;text-align:center;border:1px solid #000;">
+                            @item.Talla3
+                        </td>
+                    }
+                    else if (item.Talla3.Equals("Verde") == true)
+                    {
+                        <td style="background-color:#35a442;color:White;font-size:16px;text-align:center;border:1px solid #000;">
+                            @item.Talla3
+                        </td>
+                    }
+                    else if (item.Talla3.Equals("Azul") == true)
+                    {
+                        <td style="background-color:#2325ac; color:white;font-size:16px;text-align:center;border:1px solid #000;">
+                            @item.Talla3
+                        </td>
+                    }
+                    <td>
+                        @item.Cruz1-@item.Cruz2
+                    </td>
+                    <td>
+                        @item.D1
+                    </td>
+                    @if (item.TallaD1.Equals("Amarillo") == true)
+                    {
+                        <td style="background-color:#f1f10c;color:black;font-size:16px;text-align:center;border:1px solid #000;">
+                            @item.TallaD1
+                        </td>
+                    }
+                    else if (item.TallaD1.Equals("Naranja") == true)
+                    {
+                        <td style="background-color:#ff5e00;color:black;font-size:16px;text-align:center;border:1px solid #000;">
+                            @item.TallaD1
+                        </td>
+                    }
+                    else if (item.TallaD1.Equals("Verde") == true)
+                    {
+                        <td style="background-color:#35a442;color:White;font-size:16px;text-align:center;border:1px solid #000;">
+                            @item.TallaD1
+                        </td>
+                    }
+                    else if (item.TallaD1.Equals("Azul") == true)
+                    {
+                        <td style="background-color:#2325ac; color:white;font-size:16px;text-align:center;border:1px solid #000;">
+                            @item.TallaD1
+                        </td>
+                    }
+                    <td>
+                        @item.D2
+                    </td>
+                    @if (item.TallaD2.Equals("Amarillo") == true)
+                    {
+                        <td style="background-color:#f1f10c;color:black;font-size:16px;text-align:center;border:1px solid #000;">
+                            @item.TallaD2
+                        </td>
+                    }
+                    else if (item.TallaD2.Equals("Naranja") == true)
+                    {
+                        <td style="background-color:#ff5e00;color:black;font-size:16px;text-align:center;border:1px solid #000;">
+                            @item.TallaD2
+                        </td>
+                    }
+                    else if (item.TallaD2.Equals("Verde") == true)
+                    {
+                        <td style="background-color:#35a442;color:White;font-size:16px;text-align:center;border:1px solid #000;">
+                            @item.TallaD2
+                        </td>
+                    }
+                    else if (item.TallaD2.Equals("Azul") == true)
+                    {
+                        <td style="background-color:#2325ac; color:white;font-size:16px;text-align:center;border:1px solid #000;">
+                            @item.TallaD2
+                        </td>
+                    }
+                    <td>
+                        @item.D3
+                    </td>
+                    @if (item.TallaD3.Equals("Amarillo") == true)
+                    {
+                        <td style="background-color:#f1f10c;color:black;font-size:16px;text-align:center;border:1px solid #000;">
+                            @item.TallaD3
+                        </td>
+                    }
+                    else if (item.TallaD3.Equals("Naranja") == true)
+                    {
+                        <td style="background-color:#ff5e00;color:black;font-size:16px;text-align:center;border:1px solid #000;">
+                            @item.TallaD3
+                        </td>
+                    }
+                    else if (item.TallaD3.Equals("Verde") == true)
+                    {
+                        <td style="background-color:#35a442;color:White;font-size:16px;text-align:center;border:1px solid #000;">
+                            @item.TallaD3
+                        </td>
+                    }
+                    else if (item.TallaD3.Equals("Azul") == true)
+                    {
+                        <td style="background-color:#2325ac; color:white;font-size:16px;text-align:center;border:1px solid #000;">
+                            @item.TallaD3
+                        </td>
+                    }
+                    <td>
+                        @item.LargoMetrosBruto1
+                    </td>
+                    <td>
+                        @item.LargoMetrosBruto2
+                    </td>
+                    <td>
+                        @item.LargoMetrosBruto3
+                    </td>
+                    <td>
+                        @item.FechaIngreso.ToShortDateString()
+                    </td>
+                    <td></td>
+                </tr>
+            }
+        </table>
+    </div>
+</div>

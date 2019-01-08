@@ -1,0 +1,314 @@
+﻿@model IEnumerable<WebAppWood.Models.ModelCipres>
+
+@{
+    ViewBag.Title = "ListCipres";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>ListCipres</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Consecutivo
+        </th>
+        <th>
+            Codigo
+        </th>
+        <th>
+            Tipo
+        </th>
+        <th>
+            Largo Pulgadas
+        </th>
+        <th>
+            Talla 
+        </th>
+        <th>
+            Largo Pulgadas
+        </th>
+        <th>
+            Talla 
+        </th>
+        <th>
+            Largo Pulgadas
+        </th>
+        <th>
+            Talla 
+        </th>
+        <th>
+            Cruz
+        </th>
+        <th>
+            Diametro
+        </th>
+        <th>
+            Talla 
+        </th>
+        <th>
+            Diametro
+        </th>
+        <th>
+            Talla 
+        </th>
+        <th>
+            Diametro
+        </th>
+        <th>
+            Talla 
+        </th>
+
+        <th>
+            Largos Netos
+        </th>
+        <th>
+            Largos Netos
+        </th>
+        <th>
+            Largos Netos
+        </th>
+        <th>
+            Fecha Ingreso
+        </th>
+
+        <th>Opciones</th>
+    </tr>
+
+    @foreach (var item in Model)
+            {
+        <tr style="height:10px">
+            <td>
+                @item.id
+            </td>
+            <td>
+                @item.Codigo@item.Consecutivo
+            </td>
+            <td>
+                Cipres
+            </td>
+            <td>
+                @item.LargoPulgadas1
+            </td>
+            @if (item.Talla1.Equals("Amarillo") == true)
+            {
+                <td style="background-color:#f1f10c;color:black;font-size:16px;text-align:center;border:1px solid #000;">
+                    @item.Talla1
+                </td>
+            }
+            else if (item.Talla1.Equals("Naranja") == true)
+            {
+                <td style="background-color:#ff7625;color:white;font-size:16px;text-align:center;border:1px solid #000;">
+                    @item.Talla1
+                </td>
+            }
+            else if (item.Talla1.Equals("Verde") == true)
+            {
+                <td style="background-color:#35a442;color:White;font-size:16px;text-align:center;border:1px solid #000;">
+                    @item.Talla1
+                </td>
+            }
+            else if (item.Talla1.Equals("Azul") == true)
+            {
+                <td style="background-color:#3575D3; color:white;font-size:16px;text-align:center;border:1px solid #000;">
+                    @item.Talla1
+                </td>
+            }
+            else if (item.Talla1.Equals("-") == true)
+            {
+                <td style="background-color:#b6b2b2; color:white;font-size:16px;text-align:center;border:1px solid #000;">
+                    @item.Talla1
+                </td>
+            }
+            <td>
+                @item.LargoPulgadas2
+            </td>
+            @if (item.Talla2.Equals("Amarillo") == true)
+            {
+                <td style="background-color:#f1f10c;color:black;font-size:16px;text-align:center;border:1px solid #000;">
+                    @item.Talla2
+                </td>
+            }
+            else if (item.Talla2.Equals("Naranja") == true)
+            {
+                <td style="background-color:#ff7625;color:white;font-size:16px;text-align:center;border:1px solid #000;">
+                    @item.Talla2
+                </td>
+            }
+            else if (item.Talla2.Equals("Verde") == true)
+            {
+                <td style="background-color:#35a442;color:White;font-size:16px;text-align:center;border:1px solid #000;">
+                    @item.Talla2
+                </td>
+            }
+            else if (item.Talla2.Equals("Azul") == true)
+            {
+                <td style="background-color:#3575D3; color:white;font-size:16px;text-align:center;border:1px solid #000;">
+                    @item.Talla2
+                </td>
+            }
+            else if (item.Talla2.Equals("-") == true)
+            {
+                <td style="background-color:#b6b2b2; color:white;font-size:16px;text-align:center;border:1px solid #000;">
+                    @item.Talla2
+                </td>
+            }
+            <td>
+                @item.LargoPulgadas3
+            </td>
+            @if (item.Talla3.Equals("Amarillo") == true)
+            {
+                <td style="background-color:#f1f10c;color:black;font-size:16px;text-align:center;border:1px solid #000;">
+                    @item.Talla3
+                </td>
+            }
+            else if (item.Talla3.Equals("Naranja") == true)
+            {
+                <td style="background-color:#ff7625;color:white;font-size:16px;text-align:center;border:1px solid #000;">
+                    @item.Talla3
+                </td>
+            }
+            else if (item.Talla3.Equals("Verde") == true)
+            {
+                <td style="background-color:#35a442;color:White;font-size:16px;text-align:center;border:1px solid #000;">
+                    @item.Talla3
+                </td>
+            }
+            else if (item.Talla3.Equals("Azul") == true)
+            {
+                <td style="background-color:#3575D3; color:white;font-size:16px;text-align:center;border:1px solid #000;">
+                    @item.Talla3
+                </td>
+            }
+            else if (item.Talla3.Equals("-") == true)
+            {
+                <td style="background-color:#b6b2b2; color:white;font-size:16px;text-align:center;border:1px solid #000;">
+                    @item.Talla3
+                </td>
+            }
+            <td>
+                @item.Cruz1-@item.Cruz2
+            </td>
+            <td>
+                @item.D1
+            </td>
+            @if (item.TallaD1.Equals("Amarillo") == true)
+            {
+                <td style="background-color:#f1f10c;color:black;font-size:16px;text-align:center;border:1px solid #000;">
+                    @item.TallaD1
+                </td>
+            }
+            else if (item.TallaD1.Equals("Naranja") == true)
+            {
+                <td style="background-color:#ff7625;color:white;font-size:16px;text-align:center;border:1px solid #000;">
+                    @item.TallaD1
+                </td>
+            }
+            else if (item.TallaD1.Equals("Verde") == true)
+            {
+                <td style="background-color:#35a442;color:White;font-size:16px;text-align:center;border:1px solid #000;">
+                    @item.TallaD1
+                </td>
+            }
+            else if (item.TallaD1.Equals("Azul") == true)
+            {
+                <td style="background-color:#3575D3; color:white;font-size:16px;text-align:center;border:1px solid #000;">
+                    @item.TallaD1
+                </td>
+            }
+            else if (item.TallaD1.Equals("-") == true)
+            {
+                <td style="background-color:#b6b2b2; color:white;font-size:16px;text-align:center;border:1px solid #000;">
+                    @item.TallaD1
+                </td>
+            }
+            <td>
+                @item.D2
+            </td>
+            @if (item.TallaD2.Equals("Amarillo") == true)
+            {
+                <td style="background-color:#f1f10c;color:black;font-size:16px;text-align:center;border:1px solid #000;">
+                    @item.TallaD2
+                </td>
+            }
+            else if (item.TallaD2.Equals("Naranja") == true)
+            {
+                <td style="background-color:#ff7625;color:white;font-size:16px;text-align:center;border:1px solid #000;">
+                    @item.TallaD2
+                </td>
+            }
+            else if (item.TallaD2.Equals("Verde") == true)
+            {
+                <td style="background-color:#35a442;color:White;font-size:16px;text-align:center;border:1px solid #000;">
+                    @item.TallaD2
+                </td>
+            }
+            else if (item.TallaD2.Equals("Azul") == true)
+            {
+                <td style="background-color:#3575D3; color:white;font-size:16px;text-align:center;border:1px solid #000;">
+                    @item.TallaD2
+                </td>
+            }
+            else if (item.TallaD2.Equals("-") == true)
+            {
+                <td style="background-color:#b6b2b2; color:white;font-size:16px;text-align:center;border:1px solid #000;">
+                    @item.TallaD2
+                </td>
+            }
+            <td>
+                @item.D3
+            </td>
+            @if (item.TallaD3.Equals("Amarillo") == true)
+            {
+                <td style="background-color:#f1f10c;color:black;font-size:16px;text-align:center;border:1px solid #000;">
+                    @item.TallaD3
+                </td>
+            }
+            else if (item.TallaD3.Equals("Naranja") == true)
+            {
+                <td style="background-color:#ff7625;color:white;font-size:16px;text-align:center;border:1px solid #000;">
+                    @item.TallaD3
+                </td>
+            }
+            else if (item.TallaD3.Equals("Verde") == true)
+            {
+                <td style="background-color:#35a442;color:White;font-size:16px;text-align:center;border:1px solid #000;">
+                    @item.TallaD3
+                </td>
+            }
+            else if (item.TallaD3.Equals("Azul") == true)
+            {
+                <td style="background-color:#3575D3; color:white;font-size:16px;text-align:center;border:1px solid #000;">
+                    @item.TallaD3
+                </td>
+            }
+            else if (item.TallaD3.Equals("-") == true)
+            {
+                <td style="background-color:#b6b2b2; color:white;font-size:16px;text-align:center;border:1px solid #000;">
+                    @item.TallaD3
+                </td>
+            }
+
+            <td>
+                @item.LargoMetrosNetos1
+            </td>
+            <td>
+                @item.LargoMetrosNetos2
+            </td>
+            <td>
+                @item.LargoMetrosNetos3
+            </td>
+            <td>
+                @item.FechaIngreso.ToShortDateString()
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = @item.id }) |
+                @Html.ActionLink("Details", "Details", new { id = @item.id }) |
+            </td>
+        </tr>
+    }
+
+</table>
+

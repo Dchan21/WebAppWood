@@ -1,0 +1,49 @@
+﻿@model WebAppWood.Models.ModelMedidaFincas
+
+@{
+    ViewBag.Title = "CrearMedidaFinca";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Datos De Finca</h2>
+
+<div class="">
+    <div class="container">
+        <div class="row justify-content-md-center">
+            <div class="col col-md-5">
+                <form class="contact-form" action="/Medir/CrearMedidaFinca" method="post">
+                    <div class="form-group">
+                        <label for="select-beast">Selecione el tipo de madera</label>
+                        <select id="select-beast" class="demo-default" placeholder="Seleccione.." name="Tipo">
+                            <option value="">Seleccione..</option>
+                            <option value="Cipres">Cipres</option>
+                            <option value="Teca">Teca</option>
+                            <option value="G-Melina">G-Melina</option>
+                            <option value="Pino">Pino</option>
+                        </select>
+                        <label class="col-sm-2 control-label">Finca</label>
+                        <div class="col-sm-10">
+                            <input class="form-control" type="text" name="Finca">
+                        </div>
+                        <label class="col-sm-2 control-label">Ubicacion</label>
+                        <div class="col-sm-10">
+                            <input class="form-control" type="text" name="Ubicacion">
+                        </div>
+                        <label class="col-sm-2 control-label">Responsable</label>
+                        <div class="col-sm-10">
+                            <input class="form-control" type="text" name="Responsable">
+                        </div>
+                        <label class="col-sm-2 control-label">Fecha</label>
+                        <div class="input-prepend input-group m-b">
+                            <input type="text" class="form-control m-b" data-provide="datepicker" placeholder="Datepicker" name="Fecha">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-xl btn-block btn-primary">Crear</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+

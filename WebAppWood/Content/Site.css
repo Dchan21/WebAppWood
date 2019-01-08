@@ -22,3 +22,51 @@ select,
 textarea {
     max-width: 280px;
 }
+
+.tableMedidaArbol {
+    background-color: white;
+    border: 1px solid #2c77ba;
+    text-align: center;
+}
+
+    .tableMedidaArbol th {
+        background-color: #2c77ba !important;
+        color: white;
+        text-align: center;
+    }
+
+#tableContent {
+    margin-top: 5% !important;
+}
+
+.tableListaCipres {
+    background-color: white;
+    border: 1px solid #2c77ba;
+    text-align: center;
+}
+
+    .tableListaCipres th {
+        background-color: #2c77ba !important;
+        color: white;
+        width: 25px;
+        text-align: center;
+    }
+
+.divInput {
+    border: 1px solid #2c77ba;
+    border-radius: 5px;
+    margin: 1% 5%;
+    padding: 15px;
+    overflow: auto;
+}
+
+.card-title {
+    margin-bottom: 0;
+}
+
+.card-block {
+    background-color: white;
+}
+.card {
+    margin-bottom:0;
+}
